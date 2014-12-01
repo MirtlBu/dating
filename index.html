@@ -8,7 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Идеальное свидание</title>
 	<script src="scripts/jquery-1.11.1.min.js"></script>
-	<script src="scripts/jquery.transit.min.js"></script>
 	<script src="scripts/fullPage.js-master/vendors/jquery.easings.min.js"></script>
 	<script type="text/javascript" src="scripts/fullPage.js-master/vendors/jquery.slimscroll.min.js"></script>
 	<script type="text/javascript" src="scripts/fullPage.js-master/jquery.fullPage.js"></script>
@@ -156,25 +155,12 @@
 		</div>
 	</div>
 <script type="text/javascript">
-	var baseHeight = 1036; 
 	function scaleContent() {
     	var currentHeight = $( window ).height();
-    	var newHeight = baseHeight/currentHeight;
-
-    	var a = currentHeight*100/baseHeight;
-    	var b = 100/a;
-    	var z = 1/b;
-
-    	console.log(currentHeight + ' ' + a + ' ' + b + ' ' + z);
-	    $('.container').transition({ scale: z });
-	    // $('.container').transition({ top: -10/z + '%' });
     }
 	$(document).ready(function() {
-		scaleContent();
 	    $('#fullpage').fullpage();	       
-	    $( window ).resize(function() {
-	    	scaleContent();
-		});		
+	    	
 	});
 </script>
 
