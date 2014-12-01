@@ -87,7 +87,7 @@ ul {
 }
 
 .button-open {
-	margin: 4vh 0 5vh 0;
+	margin: 80px 0 120px 0;
 }
 
 .button-how {
@@ -256,7 +256,7 @@ ul {
 	margin: 0 auto;
 	position: relative;
 	text-align: left;
-	padding: 45px 0;
+	padding: 30px 0;
 }
 
 .hearts-how {
@@ -315,7 +315,7 @@ ul {
 
 .title-open {
 	font-size: 36px;
-	padding: 4vh 0;
+	padding: 50px 0;
 	width: 660px;
 }
 
@@ -455,3 +455,17 @@ ul {
 .suggestions.end {
 	padding: 0 0 196px 0;
 }
+
+@media (min-height: 768px) {
+  .hearts {
+  	padding: 45px 0;
+  }
+  .title-open {
+	padding: 120px 0;
+  }
+  .button-open {
+	margin: 140px 0 190px 0;
+  }
+}
+
+
