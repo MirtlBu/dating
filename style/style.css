@@ -41,11 +41,10 @@ ul {
 
 .block {	
 	width: 100%;
-	height: 100%;
-	border-bottom: 7px solid rgba(255, 255, 255, .5);
 	position: relative;
 	background-color: #f4f4f4;
 	background-size: 100%;
+	overflow: hidden;
 }
 
 .container {
@@ -94,16 +93,17 @@ ul {
 }
 
 .button-open {
-	top: 25%;
+	top: 30%;
 }
 
 .button-how {
-	
+	top: 30%;
 }
 
 .button-details {
 	border-radius: 0;
 	box-shadow: none;
+	display: inline-block;
 }
 
 .button-details > a {
@@ -123,15 +123,15 @@ ul {
 }
 
 .button-suggest {
-	
+	top: 20%;
 }
 
 .button-review {
-	
+	top: 35%;
 }
 
 .button-end {
-	
+	margin: 0 auto;
 }
 
 /*end*/
@@ -139,6 +139,7 @@ ul {
 .subscribe {
 	width: 780px;
 	margin: 15px auto;
+	top: 33%;
 	background: rgba(255, 255, 255, .7);
 	text-align: center;
 	border: 7px solid rgba(255, 255, 255, .5);
@@ -230,21 +231,32 @@ ul {
 
 /*controls*/
 .control {
-	overflow: hidden;
 	height: 40px;
 }
 
+.control:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 7px;
+	width: 100%;
+	background: rgba(255, 255, 255, .5);
+}
+
 .control a {
-	width: 80px;
-	height: 80px;
+	width: 90px;
+	height: 90px;
 	border-radius: 50%;
 	display: block; 
 	position: absolute;
-	bottom: -40px;
+	bottom: -45px;
 	left: 50%;
 	margin-left: -40px;
 	text-align: center;
-	background: #fff;
+	background-image: url(../images/arrow-down.png);
+	background-repeat: no-repeat;
+	background-position: center 25%;
+	background-color: #f4f4f4; 
 	border: 7px solid rgba(255, 255, 255, .5);
 	 -moz-background-clip: border;     
   -webkit-background-clip: border;
@@ -260,6 +272,53 @@ ul {
 	        
 	        box-sizing: border-box;
 }
+
+.end .control a {
+	background-color: #434343;
+	background-position: 48% 75%;
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	     -o-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
+/*.end .control a:after {
+	content: "";
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	display: block; 
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -40px;
+	text-align: center;
+	background-image: url(../images/arrow-down.png);
+	background-repeat: no-repeat;
+	background-position: center 25%;
+	background-color: #434343;
+	border: 7px solid rgba(255, 255, 255, .5);
+	 -moz-background-clip: border;     
+  -webkit-background-clip: border;
+      background-clip: border-box;
+				
+     -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+      background-clip: padding-box;
+				
+     -moz-background-clip: content;
+  -webkit-background-clip: content;
+      background-clip: content-box;
+	        
+	        box-sizing: border-box;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(345deg);
+}*/
 
 /*end*/
 
@@ -333,7 +392,7 @@ ul {
 
 .title-how {
 	font-size: 36px;
-	padding: 20px 0 30px 0;
+	top: 6%;
 }
 
 .title-subscribe {
@@ -346,13 +405,13 @@ ul {
 	color: #fff;
 	border-bottom: 1px solid #fff;
 	padding-bottom: 5px;
-	margin: 190px 0 10px 0;
+	margin-top: 150px;
 	text-align: left;
 }
 
 .title-review {
 	font-size: 36px;
-	padding: 20px 0 30px 0;
+	top: 6%;
 }
 
 .title-end {
@@ -360,19 +419,18 @@ ul {
 	padding: 20px 0 30px 0;
 }
 
+.how {
+	background-image: url(../images/how-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
 .how form {
 	padding: 15px 0;
 }
 
-.how-bg {
-	background-image: url(../images/how-bg.jpg); 
-	background-size: auto 100%;
-	background-position: center;
-	box-sizing: border-box;
-	height: 255px;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
+.cards {
+	top: 15%;
 }
 
 .cards__item {
@@ -388,8 +446,22 @@ ul {
 	background-image: url(../images/cards.jpg);
 }
 
+.cards__item:before {
+	content: '';
+	position: absolute;
+	background: linear-gradient( rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 1));
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 .cards__item:last-child {
 	margin-left: 15px;
+}
+
+.cards__item > div, .cards__item > ul {
+	position: relative;
 }
 
 .suggest li {
@@ -416,7 +488,7 @@ ul {
 }
 
 .reviews {
-	padding: 100px 0 100px 0;
+	top: 18%;
 }
 
 .reviews__item {
@@ -436,7 +508,7 @@ ul {
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 15px;
-	background: #ccc;
+	background-image: url(../images/reviewer.jpg);
 }
 
 .reviews__title {
@@ -470,20 +542,25 @@ ul {
 
 .end input {
 	display: block;
-	width: 100%;
-	border-radius: 5px;
-	margin-bottom: 35px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	margin: 35px auto;
+	width: 90%;
 }
 
 .end form {
 	display: inline-block;
 	width: 413px;
+	margin-left: 20px;
+	vertical-align: bottom;
+	text-align: center;
 }
 
 .end form label {
 	font-family: UbuntuLight;
 	font-size: 16px;
 	display: block;
+	margin-top: 25px;
 }
 
 .cards-end {
