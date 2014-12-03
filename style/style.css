@@ -144,7 +144,7 @@ input:focus {
 .subscribe {
 	width: 780px;
 	margin: 15px auto;
-	top: 22%;
+	top: 19%;
 	background: rgba(255, 255, 255, .7);
 	text-align: center;
 	border: 7px solid rgba(255, 255, 255, .5);
@@ -250,6 +250,20 @@ label[for="date"] {
 }
 /*end*/
 
+.decorative-arrow {
+	position: absolute;
+	top: 55px;
+	left: 0;
+}
+
+.hearts img:first-of-type{
+	left: 220px;
+}
+
+.hearts img:last-of-type{
+	left: 565px;
+}
+
 /* epic controls*/
 
 .control:before {
@@ -261,15 +275,16 @@ label[for="date"] {
 	background: rgba(255, 255, 255, .5);
 }
 
-.control a {	
+.control a {
+cursor: pointer;	
 	display: block; 
 	position: absolute;
-	bottom: -45px;
+	bottom: -35px;
 	left: 50%;
-	margin-left: -45px;
+	margin-left: -35px;
 	text-align: center;
-	width: 90px;
-    height: 90px;
+	width: 70px;
+    height: 70px;
     border-radius: 50%;
     border-top: 10px solid rgba(255, 255, 255, .5);
     border-left: 10px solid rgba(255, 255, 255, .5);
@@ -294,13 +309,13 @@ label[for="date"] {
 }
 
 .control a:before {
-	width: 90px;
-    height: 90px;
+	width: 70px;
+    height: 70px;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 5px;
+	left: 5px;
 	content: '';
-	background-image: url(../images/arrow-down.png);
+	background-image: url(images/arrow-down.png);
 	background-repeat: no-repeat;
 	background-position: center 25%;
 	
@@ -311,11 +326,50 @@ label[for="date"] {
 	        transform: rotate(-45deg);
 }
 
+.suggest .control:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+	background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(images/bit-line.jpg);
+}
+
+.suggest .control:after {
+	content: '';
+	position: absolute;
+	bottom: 10px;
+	height: 10px;
+	width: 28px;
+	margin: 0 auto;
+	background-image: url(images/arrow-down.png);
+	background-repeat: no-repeat;
+	background-position: center 25%;
+}
+
 .suggest .control a {
-	background: url(../images/arrow-down.png) center 25% no-repeat, url(../images/bit.jpg) center 25% no-repeat;
+	background:  url(images/bit.jpg) -10px -10px no-repeat;
+	bottom: -35px;
+	border: none;
+	width: 90px;
+	height: 90px;
+}
+
+.suggest .control a:after {
+	content: '';
+	position: absolute;
+	background: rgba(255, 255, 255, .5);
+	width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
 }
 
 .end .control a {
+	width: 90px;
+	height: 90px;
+	bottom: -35px;
 	background-color: #434343;
 	background-position: 48% 75%;
 	border: none;
@@ -326,17 +380,18 @@ label[for="date"] {
 	        transform: rotate(180deg);
 }
 
-.suggest .control:before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	height: 7px;
-	width: 100%;
-	background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(../images/bit-line.jpg);
-}
-
 .end .control:before {
 	background: #434343;
+}
+
+.end .control a:before {
+	left: 8px;
+	top: 35px;
+    -webkit-transform: rotate(0deg);
+	   -moz-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	     -o-transform: rotate(0deg);
+	        transform: rotate(0deg);
 }
 
 /*end*/
@@ -346,11 +401,11 @@ label[for="date"] {
 	margin: 0 auto;
 	text-align: left;
 	padding: 10px 0;
-	top: 10%;
+	top: 8%;
 }
 
 .hearts-how {
-	width: 900px;
+	width: 100%;
 	text-align: center;
 }
 
@@ -358,22 +413,10 @@ label[for="date"] {
 	display: inline-block;
 	position: relative;
 	text-align: center;
-	width: 199px;
+	width: 32.8%;
 	line-height: 1.5;
 	padding: 20px 0;
 }
-
-.hearts__item-how {
-	width: 250px;
-}
-
-/*.hearts__item:not(:first-child) {
-	margin-left: 125px;
-}
-
-.hearts__item-how:not(:first-child) {
-	margin-left: 70px;
-}*/
 
 .hearts__image i {
 	font-size: 58px;
@@ -385,7 +428,7 @@ label[for="date"] {
 }
 
 .open {
-	background-image: url(../images/open-bg.jpg); 
+	background-image: url(/Users/mirtlbu/Documents/dating/style/images/open-bg.jpg); 
 }
 
 .open__phone {
@@ -427,7 +470,7 @@ label[for="date"] {
 }
 
 .how {
-	background-image: url(../images/how-bg.jpg);
+	background-image: url(images/how-bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: 110%;
@@ -451,7 +494,7 @@ label[for="date"] {
 	position: relative;
 	width: 440px;
 	padding: 15px;
-	background-image: url(../images/cards.jpg);
+	background-image: url(images/cards.jpg);
 }
 
 .cards__item:before {
@@ -476,23 +519,25 @@ label[for="date"] {
 	padding-bottom: 10px;
 }
 
+.time, .price {
+	font-family: UbuntuLight;
+	line-height: 1.5;
+}
+
 .time {
-	font-family: UbuntuLight:;
 	font-size: 18px;
 }
 
-.time i, .price i {
-	font-size: 30px;
-	padding: 15px 10px 0 0;
-}
-
 .price {
-	font-family: UbuntuBold;
 	font-size: 22px;
 }
 
+.time img, .price img {
+	padding: 15px 10px 0 0;
+	vertical-align: bottom;
+}
 .review {
-	background-image: url(../images/review-bg.jpg);
+	background-image: url(images/review-bg.jpg);
 }
 
 .reviews {
@@ -507,6 +552,20 @@ label[for="date"] {
 	background: #fff;
 	border-radius: 5px;
 	text-align: left;
+	position: relative;
+}
+
+.reviews__item:before {
+	content: '';
+	position: absolute;
+	width:0;
+	height: 0;
+	top: -20px;
+	left: 50px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid #fff;
 }
 
 .reviews__photo {
@@ -516,7 +575,7 @@ label[for="date"] {
 	float: left;
 	margin-right: 15px;
 	margin-bottom: 15px;
-	background-image: url(../images/reviewer.jpg);
+	background-image: url(images/reviewer.jpg);
 }
 
 .reviews__title {
@@ -593,20 +652,40 @@ label[for="date"] {
 	margin: 280px 0 10px 0;
 }
 
+/*Raping slider*/
+
 .container .fp-controlArrow {
 	position: absolute;
-	background: #d3d3d3;
-	width: 30px !important;
-	height: 30px;
+	background-image: url(images/2-3screen_arrow.png);
+	width: 28px !important;
+	height: 28px;
 	border-radius: 50%;
 	border: none;
 }
 
+.fp-controlArrow.fp-next {
+	-webkit-transform: rotate(180deg);
+	   -moz-transform: rotate(180deg);
+	    -ms-transform: rotate(180deg);
+	     -o-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
 .container .fp-controlArrow.fp-next {
-	left: 510px;
+	right: 442px;
 }
 .container .fp-controlArrow.fp-prev {
 	left: -30px;
+}
+
+.review .fp-controlArrow.fp-next {
+	right: -5px;
+	top: 57%;
+	
+}
+.review .fp-controlArrow.fp-prev {
+	left: -5px;
+	top: 57%;
 }
 
 .container .fp-slides {	
@@ -620,11 +699,17 @@ label[for="date"] {
 	display: block;
 }
 
+.review .fp-slides {
+	height: 100%;
+	width: 910px;
+	margin: 0 35px;
+}
 
-
-/*.container .fp-slidesContainer {
-	top: 10%;
-}*/
+.review .fp-slide {
+	width: 445px !important;
+	margin-right: 20px;
+	display: inline-block !important;
+}
 
 
 
