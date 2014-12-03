@@ -264,8 +264,9 @@ label[for="date"] {
 	left: 565px;
 }
 
-/* epic controls*/
+/* EPIC CONTROLS*/
 
+/* underline */
 .control:before {
 	content: '';
 	position: absolute;
@@ -274,14 +275,28 @@ label[for="date"] {
 	width: 100%;
 	background: rgba(255, 255, 255, .5);
 }
-
+/* arrow */
+.control:after {
+	cursor: pointer;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	height: 28px;
+	width: 28px;
+	margin-left: -14px;
+	background-image: url(images/arrow-down.png);
+	background-repeat: no-repeat;
+	background-position: center 25%;
+}
+/* circle */
 .control a {
-cursor: pointer;	
+	cursor: pointer;	
 	display: block; 
 	position: absolute;
 	bottom: -35px;
 	left: 50%;
-	margin-left: -35px;
+	margin-left: -45px;
 	text-align: center;
 	width: 70px;
     height: 70px;
@@ -308,24 +323,7 @@ cursor: pointer;
 	    background-clip: content-box;        
 }
 
-.control a:before {
-	width: 70px;
-    height: 70px;
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	content: '';
-	background-image: url(images/arrow-down.png);
-	background-repeat: no-repeat;
-	background-position: center 25%;
-	
-	-webkit-transform: rotate(-45deg);
-	   -moz-transform: rotate(-45deg);
-	    -ms-transform: rotate(-45deg);
-	     -o-transform: rotate(-45deg);
-	        transform: rotate(-45deg);
-}
-
+/* EPIC CONTROLS for suggest screen*/
 .suggest .control:before {
 	content: '';
 	position: absolute;
@@ -333,18 +331,6 @@ cursor: pointer;
 	height: 10px;
 	width: 100%;
 	background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(images/bit-line.jpg);
-}
-
-.suggest .control:after {
-	content: '';
-	position: absolute;
-	bottom: 10px;
-	height: 10px;
-	width: 28px;
-	margin: 0 auto;
-	background-image: url(images/arrow-down.png);
-	background-repeat: no-repeat;
-	background-position: center 25%;
 }
 
 .suggest .control a {
@@ -355,7 +341,7 @@ cursor: pointer;
 	height: 90px;
 }
 
-.suggest .control a:after {
+.suggest .control a:before {
 	content: '';
 	position: absolute;
 	background: rgba(255, 255, 255, .5);
@@ -366,25 +352,39 @@ cursor: pointer;
     left: 0;
 }
 
+.suggest .control a:after {
+	content: '';
+	position: absolute;
+	background:  url(images/bit.jpg) -10px -10px no-repeat;
+	width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    bottom: 10px;
+    left: 10px;
+}
+
+/* EPIC CONTROLS for end screen*/
+.end .control:before {
+	background: #434343;
+}
+
 .end .control a {
 	width: 90px;
 	height: 90px;
-	bottom: -35px;
 	background-color: #434343;
-	background-position: 48% 75%;
 	border: none;
-	-webkit-transform: rotate(180deg);
+}
+
+.end .control:after {
+	bottom: 10px;
+	 -webkit-transform: rotate(180deg);
 	   -moz-transform: rotate(180deg);
 	    -ms-transform: rotate(180deg);
 	     -o-transform: rotate(180deg);
 	        transform: rotate(180deg);
 }
 
-.end .control:before {
-	background: #434343;
-}
-
-.end .control a:before {
+/*.end .control a:before {
 	left: 8px;
 	top: 35px;
     -webkit-transform: rotate(0deg);
@@ -392,7 +392,7 @@ cursor: pointer;
 	    -ms-transform: rotate(0deg);
 	     -o-transform: rotate(0deg);
 	        transform: rotate(0deg);
-}
+}*/
 
 /*end*/
 
