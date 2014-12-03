@@ -77,9 +77,7 @@ input:focus {
 	display: block;
 	margin: 0 auto;
 	position: relative;
-	-webkit-box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.5);
-	   -moz-box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.5);
-	        box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.5);
+	box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.5);
 }
 
 .button  > a {
@@ -92,9 +90,7 @@ input:focus {
 	font-family: Museo, Helvetica, Arial, sans-serif;
 	cursor: pointer;
 	       text-shadow: 0px 1px 0px rgba(50, 50, 50, 1);
-	-webkit-box-shadow: 0px 3px 0px 0px rgba(144, 46, 50, 1);
-	   -moz-box-shadow: 0px 3px 0px 0px rgba(144, 46, 50, 1);
-	        box-shadow: 0px 3px 0px 0px rgba(144, 46, 50, 1);
+	box-shadow: 0px 3px 0px 0px rgba(144, 46, 50, 1);
 }
 
 .button-open {
@@ -148,19 +144,13 @@ input:focus {
 	background: rgba(255, 255, 255, .7);
 	text-align: center;
 	border: 7px solid rgba(255, 255, 255, .5);
-	 -moz-background-clip: border;     
-  -webkit-background-clip: border;
-      background-clip: border-box;
-				
-     -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-      background-clip: padding-box;
-				
-     -moz-background-clip: content;
-  -webkit-background-clip: content;
-      background-clip: content-box;
+  background-clip: border-box;
+  background-clip: padding-box;
+  background-clip: content-box;
 	        
-	        box-sizing: border-box;
+	        -moz-box-sizing: border-box;
+	        
+	             box-sizing: border-box;
 }
 
 .subscribe input, .end input, .end select {
@@ -308,19 +298,11 @@ label[for="date"] {
     background-color: #f4f4f4;
      
     -webkit-transform: rotate(45deg);
-	   -moz-transform: rotate(45deg);
 	    -ms-transform: rotate(45deg);
-	     -o-transform: rotate(45deg);
 	        transform: rotate(45deg);
-		-moz-background-clip: border;
-	 -webkit-background-clip: border;
-	     background-clip: border-box;
-       -moz-background-clip: padding;
-	-webkit-background-clip: padding;
-	    background-clip: padding-box;
-	   -moz-background-clip: content;
-	-webkit-background-clip: content;
-	    background-clip: content-box;        
+	 background-clip: border-box;
+	background-clip: padding-box;
+	background-clip: content-box;        
 }
 
 /* EPIC CONTROLS for suggest screen*/
@@ -330,6 +312,7 @@ label[for="date"] {
 	bottom: 0;
 	height: 10px;
 	width: 100%;
+	background: -webkit-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(images/bit-line.jpg);
 	background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(images/bit-line.jpg);
 }
 
@@ -378,9 +361,7 @@ label[for="date"] {
 .end .control:after {
 	bottom: 10px;
 	 -webkit-transform: rotate(180deg);
-	   -moz-transform: rotate(180deg);
 	    -ms-transform: rotate(180deg);
-	     -o-transform: rotate(180deg);
 	        transform: rotate(180deg);
 }
 
@@ -500,6 +481,7 @@ label[for="date"] {
 .cards__item:before {
 	content: '';
 	position: absolute;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 1));
 	background: linear-gradient( rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 1));
 	top: 0;
 	bottom: 0;
@@ -547,7 +529,8 @@ label[for="date"] {
 .reviews__item {
 	width: 445px;
 	padding: 20px;
-	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
 	display: inline-block;
 	background: #fff;
 	border-radius: 5px;
@@ -619,9 +602,7 @@ label[for="date"] {
 	   -webkit-appearance:none;
           -moz-appearance:none;
                appearance:none;
-	-webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
+ border-radius: 3px;
 }
 
 .end form {
@@ -665,9 +646,7 @@ label[for="date"] {
 
 .fp-controlArrow.fp-next {
 	-webkit-transform: rotate(180deg);
-	   -moz-transform: rotate(180deg);
 	    -ms-transform: rotate(180deg);
-	     -o-transform: rotate(180deg);
 	        transform: rotate(180deg);
 }
 
@@ -680,8 +659,7 @@ label[for="date"] {
 
 .review .fp-controlArrow.fp-next {
 	right: -5px;
-	top: 57%;
-	
+	top: 57%;	
 }
 .review .fp-controlArrow.fp-prev {
 	left: -5px;
