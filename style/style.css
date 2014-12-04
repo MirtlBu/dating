@@ -53,7 +53,7 @@ input:focus {
 	min-height: 600px;
 	position: relative;
 	background-color: #f4f4f4;
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
@@ -98,12 +98,12 @@ input:focus {
 	box-shadow: 0px 3px 0px 0px rgba(144, 46, 50, 1);
 }
 
-.button-open {
+.button-open, .button-suggest, .button-review {
 	top: 80%;
 }
 
 .button-how {
-	top: 15%;
+	top: 50%;
 }
 
 .button-details {
@@ -128,14 +128,6 @@ input:focus {
 	
 }
 
-.button-suggest {
-	top: 16%;
-}
-
-.button-review {
-	top: 32%;
-}
-
 .button-end {
 	margin: 0 auto;
 }
@@ -145,17 +137,15 @@ input:focus {
 .subscribe {
 	width: 780px;
 	margin: 15px auto;
-	top: 19%;
+	top: 70%;
 	background: rgba(255, 255, 255, .7);
 	text-align: center;
 	border: 7px solid rgba(255, 255, 255, .5);
-  background-clip: border-box;
-  background-clip: padding-box;
-  background-clip: content-box;
-	        
-	        -moz-box-sizing: border-box;
-	        
-	             box-sizing: border-box;
+	background-clip: border-box;
+	background-clip: padding-box;
+	background-clip: content-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .subscribe input, .end input, .end select {
@@ -171,19 +161,8 @@ input:focus {
 	border-radius: 3px;
 	margin: 35px auto;
 	width: 90%;
+	font-family: UbuntuLight;
 }
-
-label[for="date"] {
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent; 
-	border-top: 10px solid #ccc; 
-	border-bottom: 10px solid transparent;
-	position: absolute;
-	top: 55px;
-	right: 45px;
-	pointer-events:none;  
-}
-
 
 /*decoration heartline*/
 
@@ -249,6 +228,12 @@ label[for="date"] {
 	position: absolute;
 	top: 55px;
 	left: 0;
+}
+
+.decoration-end {
+	position: absolute;
+	right: 120px;
+	top: -60px;
 }
 
 .hearts img:first-of-type{
@@ -370,15 +355,6 @@ label[for="date"] {
 	        transform: rotate(180deg);
 }
 
-/*.end .control a:before {
-	left: 8px;
-	top: 35px;
-    -webkit-transform: rotate(0deg);
-	   -moz-transform: rotate(0deg);
-	    -ms-transform: rotate(0deg);
-	     -o-transform: rotate(0deg);
-	        transform: rotate(0deg);
-}*/
 
 /*end*/
 
@@ -393,6 +369,7 @@ label[for="date"] {
 .hearts-how {
 	width: 100%;
 	text-align: center;
+	top: 15%;
 }
 
 .hearts__item {
@@ -436,9 +413,14 @@ label[for="date"] {
 	line-height: 2;
 }
 
-.title-open, .title-how, .title-review, .title-end {
+.title-open {
 	font-size: 36px;
 	top: 15%;
+}
+
+.title-how, .title-review, .title-end {
+	font-size: 36px;
+	top: 5%;
 }
 
 .title-subscribe {
@@ -467,7 +449,7 @@ label[for="date"] {
 }
 
 .cards {
-	top: 10%;
+	top: 16%;
 	height: 58%;
 }
 
@@ -528,7 +510,7 @@ label[for="date"] {
 }
 
 .reviews {
-	top: 15%;
+	top: 18%;
 }
 
 .reviews__item {
@@ -571,11 +553,24 @@ label[for="date"] {
 	text-align: left;
 	padding-top: 8px;
 }
+
 .reviews__link {
 	font-size: 14px;
 	font-family: UbuntuLight;
 	color: #c03d43;
 	margin: 12px 0 10px 0;
+}
+
+.reviews__link span {
+	display: inline-block;
+	border: 2px solid #c03d43;
+	border-radius: 50%;
+	width: 23px;
+	line-height: 1.1;
+	margin-right: 6px;
+	text-align: center;
+	font-family: UbuntuBold;
+	font-size: 20px;
 }
 
 .reviews__text {
@@ -596,7 +591,7 @@ label[for="date"] {
 }
 
 .hellwrapper {
-	top: 9%;
+	top: 23%;
 }
 
 .end select {
@@ -616,6 +611,7 @@ label[for="date"] {
 	width: 413px;
 	margin-left: 35px;
 	text-align: center;
+	position: relative;
 }
 
 .end form span {
@@ -694,7 +690,69 @@ label[for="date"] {
 	display: inline-block !important;
 }
 
+/*plugin for select dropdown*/
 
+.sbHolder {
+	width: 90%;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	font-family: UbuntuLight;
+	display: block;
+	border-radius: 3px;
+	margin: 35px auto;
+	position: relative;
+	height: 39px;
+	padding: 0 0 0 10px;
+	font-size: 20px;
+	text-align: left;
+}
+
+.sbToggle, .sbToggle:hover {
+	width: 0;
+	height: 0;
+	right: 15px;
+	top: 18px;
+	background: transparent;
+	border-top: 6px solid #000000;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent; 
+}
+
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover {
+	color: #aaa;
+	line-height: 1.8;
+}
+
+.sbOptions {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	list-style: none;
+	left: -1px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 39px !important;
+	width: 100%;
+	z-index: 1;
+	overflow-y: auto;
+	-webkit-box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.14);
+    -moz-box-shadow:    0px 4px 5px 0px rgba(50, 50, 50, 0.14);
+    box-shadow:         0px 4px 5px 0px rgba(50, 50, 50, 0.14);
+}
+
+.sbOptions a {
+	border-bottom: 1px solid #ccc;
+	color: #aaa;
+}
+
+.sbOptions li:last-child a {
+	border-bottom: none;
+}
+
+.sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus {
+	color: #aaa;
+}
 
 
 
