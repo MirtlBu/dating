@@ -22,7 +22,8 @@
 		<div class="block open section" id="open">
 			<div class="container">
 				<div class="header">
-					<div class="open__phone">Готовые романтические свидания. Удиви её по-настоящему!</div>
+					<div class="open__text">Готовые романтические свидания. <br><span>Удиви её по-настоящему!</span></div>
+					<img src="style/images/logo.png" class="open__logo">
 					<div class="open__phone">+7(495) 777-77-77</div>
 				</div>
 				<div class="title title-open">Идеальное свидание вместе с нами — <span>мы&nbsp;все&nbsp;сделаем за вас!</span> </div>
@@ -231,12 +232,20 @@
 	$(document).ready(function() {
 
 	    $('#fullpage').fullpage(
-		    {navigation: true, verticalCentered: false}
+		    {
+		    	navigation: true, 
+		    	verticalCentered: false, 
+		    	afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+		    		console.log(anchorLink, index, slideAnchor, slideIndex);
+		    		$("#date").selectbox("option");
+		    	}
+		    }
 	    );
 
         $('.control').not('.toTop').click(function() {
 	    	$.fn.fullpage.moveSectionDown();
 	    });
+
 	    $('.toTop').click(function() {
 	    	$.fn.fullpage.moveTo(1, 0);
 	    });
@@ -244,7 +253,7 @@
 
 		$("#date").selectbox({
 			onChange: function (val, inst) {
-				console.log(val);
+				console.log('changed!');
 				$.fn.fullpage.moveTo(5, val - 1);
 			},
 			effect: "slide"

@@ -41,6 +41,8 @@ ul {
 
 input {
 	border: 1px solid #ccc;
+	font-family: UbuntuLight;
+	font-size: 18px;
 }
 
 input:focus {
@@ -161,7 +163,6 @@ input:focus {
 	border-radius: 3px;
 	margin: 35px auto;
 	width: 90%;
-	font-family: UbuntuLight;
 }
 
 /*decoration heartline*/
@@ -251,7 +252,7 @@ input:focus {
 	content: '';
 	position: absolute;
 	bottom: 0;
-	height: 10px;
+	height: 5px;
 	width: 100%;
 	background: rgba(255, 255, 255, .5);
 }
@@ -264,7 +265,7 @@ input:focus {
 	left: 50%;
 	height: 28px;
 	width: 28px;
-	margin-left: -14px;
+	margin-left: -18px;
 	background-image: url(images/arrow-down.png);
 	background-repeat: no-repeat;
 	background-position: center 25%;
@@ -281,10 +282,10 @@ input:focus {
 	width: 70px;
     height: 70px;
     border-radius: 50%;
-    border-top: 10px solid rgba(255, 255, 255, .5);
-    border-left: 10px solid rgba(255, 255, 255, .5);
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-top: 5px solid rgba(255, 255, 255, .5);
+    border-left: 5px solid rgba(255, 255, 255, .5);
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
     background-color: #f4f4f4;
      
     -webkit-transform: rotate(45deg);
@@ -300,7 +301,7 @@ input:focus {
 	content: '';
 	position: absolute;
 	bottom: 0;
-	height: 10px;
+	height: 5px;
 	width: 100%;
 	background: -webkit-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(images/bit-line.jpg);
 	background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url(images/bit-line.jpg);
@@ -310,16 +311,16 @@ input:focus {
 	background:  url(images/bit.jpg) -10px -10px no-repeat;
 	bottom: -35px;
 	border: none;
-	width: 90px;
-	height: 90px;
+	width: 80px;
+	height: 80px;
 }
 
 .suggest .control a:before {
 	content: '';
 	position: absolute;
 	background: rgba(255, 255, 255, .5);
-	width: 90px;
-    height: 90px;
+	width: 80px;
+    height: 80px;
     border-radius: 50%;
     top: 0;
     left: 0;
@@ -332,8 +333,8 @@ input:focus {
 	width: 70px;
     height: 70px;
     border-radius: 50%;
-    bottom: 10px;
-    left: 10px;
+    bottom: 5px;
+    left: 5px;
 }
 
 /* EPIC CONTROLS for end screen*/
@@ -342,14 +343,15 @@ input:focus {
 }
 
 .end .control a {
-	width: 90px;
-	height: 90px;
+	width: 75px;
+	height: 75px;
 	background-color: #434343;
 	border: none;
 }
 
 .end .control:after {
-	bottom: 10px;
+	bottom: 5px;
+	margin-left: -20px;
 	 -webkit-transform: rotate(180deg);
 	    -ms-transform: rotate(180deg);
 	        transform: rotate(180deg);
@@ -396,9 +398,27 @@ input:focus {
 
 .open__phone {
 	font-size: 20px;
-	font-family: Ubuntu, Helvetica, Arial, sans-serif;
-	padding: 15px 0;
+	font-family: UbuntuBold;
 	display: inline-block;
+	float: right;
+	margin: 5px 15px 0 0;
+}
+
+.open__logo {
+	margin-top: 10px;
+}
+
+.open__text {
+	font-size: 14px;
+	font-family: UbuntuLight;
+	color: #000000;
+	float: left;
+	margin: 5px 15px 0 0;
+}
+
+.open__text span{
+	font-family: UbuntuBold;
+	color: #c03d43;
 }
 
 .title {
@@ -461,6 +481,7 @@ input:focus {
 	display: inline-block;	
 	position: relative;
 	width: 440px;
+	border-radius: 5px;
 	padding: 15px;
 	background-image: url(images/cards.jpg);
 }
@@ -468,12 +489,13 @@ input:focus {
 .cards__item:before {
 	content: '';
 	position: absolute;
-	background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 1));
-	background: linear-gradient( rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 1));
+	background: -webkit-linear-gradient(rgba(0, 0, 0, .2) 65%, rgba(0, 0, 0, .9));
+	background: linear-gradient( rgba(0, 0, 0, .2) 65%, rgba(0, 0, 0, .9));
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	border-radius: 5px;
 }
 
 .cards__item:last-child {
@@ -489,16 +511,17 @@ input:focus {
 }
 
 .time, .price {
-	font-family: UbuntuLight;
 	line-height: 1.5;
 }
 
 .time {
 	font-size: 18px;
+	font-family: UbuntuLight;
 }
 
 .price {
 	font-size: 22px;
+	font-family: UbuntuMedium;
 }
 
 .time img, .price img {
@@ -575,7 +598,7 @@ input:focus {
 
 .reviews__text {
 	font-family: UbuntuLight;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .reviews__link i {
@@ -695,8 +718,10 @@ input:focus {
 .sbHolder {
 	width: 90%;
 	background-color: #fff;
-	border: 1px solid #ccc;
+	color: #fff;
+	border: 1px solid #c03d43;
 	font-family: UbuntuLight;
+	font-size: 18px;
 	display: block;
 	border-radius: 3px;
 	margin: 35px auto;
