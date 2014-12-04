@@ -137,7 +137,7 @@ input:focus {
 .subscribe {
 	width: 780px;
 	margin: 15px auto;
-	top: 70%;
+	top: 67%;
 	background: rgba(255, 255, 255, .7);
 	text-align: center;
 	border: 7px solid rgba(255, 255, 255, .5);
@@ -425,7 +425,7 @@ input:focus {
 
 .title-subscribe {
 	font-size: 30px;
-	padding: 20px 0 10px 0;
+	padding: 10px 0;
 }
 
 .title-suggest {

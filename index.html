@@ -73,7 +73,7 @@
 				</div>
 				<button class="button button-how"><a>Удиви её по-настоящему</a></button>
 				<div class="subscribe">
-					<div class="title title-subscribe">Узнай все правила идеального свидания</div>
+					<div class="title title-subscribe">Узнайте все правила идеального свидания</div>
 					<div class="heartline heartline-red"><i class="fa fa-heart"></i></div>
 					<form>
 						<input type="input" placeholder="Введите ваш E-mail..."/>
@@ -205,9 +205,9 @@
 						<form>
 							<img src="style/images/4screen_text-arrow.png" class="decoration-end">
 							<select id="date">
-								<option value="river">Ужин на берегу реки</option>
-								<option value="down">Встреча заката</option>
-								<option value="omsk">Поездка в Омск</option>
+								<option value="1">Ужин на берегу реки</option>
+								<option value="2">Встреча заката</option>
+								<option value="3">Поездка в Омск</option>
 							</select>
 							<input type="input" placeholder="Ваше имя"/>
 							<input type="input" placeholder="Ваш телефон"/>
@@ -243,9 +243,10 @@
 
 
 		$("#date").selectbox({
-			onOpen: function (inst) {},
-			onClose: function (inst) {},
-			onChange: function (val, inst) {},
+			onChange: function (val, inst) {
+				console.log(val);
+				$.fn.fullpage.moveTo(5, val - 1);
+			},
 			effect: "slide"
 		});
 
