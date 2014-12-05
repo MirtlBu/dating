@@ -29,6 +29,16 @@ html, body {
    src: url(fonts/Ubuntu/Ubuntu-Bold.ttf);
 }
 
+@font-face {
+	font-family: RobotoBold;
+	src: url(fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+	font-family: RobotoLight;
+	src: url(fonts/Roboto/Roboto-Light.ttf);
+}
+
 input, button, select {
 	outline: 0;
 }
@@ -47,6 +57,62 @@ input {
 
 input:focus {
 	border: 1px solid #c03d43;
+}
+
+.header-fixed {
+	width: 100%;
+	height: 50px;
+	background: #27292b;
+	position: fixed;
+	z-index: 2;
+}
+
+.centered {
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 6px;
+}
+
+.centered > * {
+	display: inline-block;
+	margin-right: 18px;
+}
+
+
+.header-fixed span {
+	font-size: 13px;
+	color: #fff;
+	font-family: RobotoLight;
+}
+
+.epic-logo {
+	vertical-align: middle;
+}
+
+.circle-epic {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #7396ae;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.circle-epic img {
+	position: absolute;
+	top: 5px;
+	left: 6px;
+}
+
+.price-epic {
+	color: #fff;
+	font-family: RobotoLight;
+}
+
+.price-epic span {
+	font-family: RobotoBold;
 }
 
 .block {	
@@ -73,6 +139,10 @@ input:focus {
 	position: absolute;
 	left: 0;
 	right: 0;
+}
+
+.header {
+	top: 50px;
 }
 
 /*button*/
@@ -132,6 +202,19 @@ input:focus {
 
 .button-end {
 	margin: 0 auto;
+}
+
+.button-buy {
+	width: 160px;
+	height: 30px;
+	border-radius: 0;
+	background: #32b0e3;
+	border: 1px solid #0092cd;
+	color: #fff;
+	font-family: RobotoLight;
+	font-size: 14px;
+	background: -webkit-linear-gradient(rgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
+	background: linear-gradient(rrgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
 }
 
 /*end*/
@@ -404,7 +487,7 @@ input:focus {
 	margin: 5px 15px 0 0;
 }
 
-.open__logo {
+.logo {
 	margin-top: 10px;
 }
 
@@ -435,12 +518,12 @@ input:focus {
 
 .title-open {
 	font-size: 36px;
-	top: 15%;
+	top: 18%;
 }
 
 .title-how, .title-review, .title-end {
 	font-size: 36px;
-	top: 5%;
+	top: 9%;
 }
 
 .title-subscribe {
@@ -469,7 +552,7 @@ input:focus {
 }
 
 .cards {
-	top: 16%;
+	top: 19%;
 	height: 58%;
 }
 
@@ -533,7 +616,7 @@ input:focus {
 }
 
 .reviews {
-	top: 18%;
+	top: 23%;
 }
 
 .reviews__item {
@@ -614,7 +697,7 @@ input:focus {
 }
 
 .hellwrapper {
-	top: 23%;
+	top: 25%;
 }
 
 .end select {
@@ -777,6 +860,15 @@ input:focus {
 
 .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus {
 	color: #aaa;
+}
+
+@media screen and ( min-height: 768px ){
+    .cards {
+    	height: 73%;
+    }
+    .title-suggest {
+    	margin-top: 70%;
+    }
 }
 
 
