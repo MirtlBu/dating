@@ -68,14 +68,14 @@ input:focus {
 }
 
 .centered {
-	width: 980px;
+	width: 1010px;
 	margin: 0 auto;
 	padding-top: 6px;
 }
 
 .centered > * {
 	display: inline-block;
-	margin-right: 18px;
+	margin-right: 25px;
 }
 
 
@@ -156,7 +156,9 @@ input:focus {
 	margin: 0 auto;
 	width: 324px;
 	position: absolute;
-	box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.5);
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow:    0px 2px 5px 0px rgba(0, 0, 0, 0.22);
+	box-shadow:         0px 2px 5px 0px rgba(0, 0, 0, 0.22);
 }
 
 .button-normal {
@@ -175,8 +177,12 @@ input:focus {
 	font-size: 24px;
 	font-family: Museo, Helvetica, Arial, sans-serif;
 	cursor: pointer;
-	       text-shadow: 0px 1px 0px rgba(50, 50, 50, 1);
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.41);
 	box-shadow: 0px 3px 0px 0px rgba(144, 46, 50, 1);
+}
+
+.button  > a:hover {
+	background: rgba(144, 46, 50, 1);
 }
 
 .button-open, .button-suggest, .button-review {
@@ -220,6 +226,7 @@ input:focus {
 
 .button-buy {
 	float: right;
+	cursor: pointer;
 	width: 160px;
 	height: 30px;
 	margin-top: 4px;
@@ -227,10 +234,15 @@ input:focus {
 	background: #32b0e3;
 	border: 1px solid #0092cd;
 	color: #fff;
-	font-family: RobotoLight;
+	font-family: RobotoBold;
 	font-size: 14px;
 	background: -webkit-linear-gradient(rgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
 	background: linear-gradient(rrgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.button-buy:hover {
+	border: 1px solid #006e9a;
 }
 
 /*end*/
