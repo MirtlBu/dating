@@ -153,8 +153,16 @@ input:focus {
 	padding: 0 0 3px 0;
 	display: block;
 	margin: 0 auto;
-	position: relative;
+	width: 324px;
+	position: absolute;
 	box-shadow: 0px 5px 7px 0px rgba(50, 50, 50, 0.5);
+}
+
+.button-normal {
+	left: 0;
+	right: 0;
+	width: 324px;
+	bottom: 10%;
 }
 
 .button  > a {
@@ -171,17 +179,21 @@ input:focus {
 }
 
 .button-open, .button-suggest, .button-review {
-	top: 80%;
+	
 }
 
 .button-how {
 	top: 50%;
+	left: 0;
+	right: 0;
 }
 
 .button-details {
 	border-radius: 0;
 	box-shadow: none;
 	display: inline-block;
+	width: 245px;
+	position: relative;
 }
 
 .button-details > a {
@@ -194,6 +206,7 @@ input:focus {
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
+	width: 180px;
 }
 
 .button-order > a {
@@ -201,10 +214,11 @@ input:focus {
 }
 
 .button-end {
-	margin: 0 auto;
+	bottom: -18%;
 }
 
 .button-buy {
+	float: right;
 	width: 160px;
 	height: 30px;
 	border-radius: 0;
@@ -862,7 +876,7 @@ input:focus {
 	color: #aaa;
 }
 
-@media screen and ( min-height: 768px ){
+@media screen and ( min-height: 850px ){
     .cards {
     	height: 73%;
     }
