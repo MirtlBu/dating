@@ -31,12 +31,12 @@ html, body {
 
 @font-face {
 	font-family: RobotoBold;
-	src: url(fonts/Roboto/Roboto-Bold.ttf);
+	src: url(fonts/roboto/Roboto-Bold.ttf);
 }
 
 @font-face {
 	font-family: RobotoLight;
-	src: url(fonts/Roboto/Roboto-Light.ttf);
+	src: url(fonts/roboto/Roboto-Light.ttf);
 }
 
 input, button, select {
@@ -83,6 +83,7 @@ input:focus {
 	font-size: 13px;
 	color: #fff;
 	font-family: RobotoLight;
+	vertical-align: middle;
 }
 
 .epic-logo {
@@ -221,6 +222,7 @@ input:focus {
 	float: right;
 	width: 160px;
 	height: 30px;
+	margin-top: 4px;
 	border-radius: 0;
 	background: #32b0e3;
 	border: 1px solid #0092cd;
