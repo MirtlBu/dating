@@ -29,6 +29,16 @@ html, body {
    src: url(fonts/Ubuntu/Ubuntu-Bold.ttf);
 }
 
+@font-face {
+	font-family: RobotoBold;
+	src: url(fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+	font-family: RobotoLight;
+	src: url(fonts/Roboto/Roboto-Light.ttf);
+}
+
 input, button, select {
 	outline: 0;
 }
@@ -47,6 +57,45 @@ input {
 
 input:focus {
 	border: 1px solid #c03d43;
+}
+
+.header-fixed {
+	width: 100%;
+	height: 50px;
+	background: #27292b;
+	position: fixed;
+	z-index: 2;
+	padding: 0 100px;
+}
+
+.header-fixed > * {
+	display: inline-block;
+	font-family: 'RobotoLight';
+}
+
+.header-fixed span {
+	font-size: 13px;
+	color: #fff;
+	font-family: 'RobotoLight';
+}
+
+.circle-epic {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #7396ae;
+	position: relative;
+	display: inline-block;
+}
+
+.circle-epic img {
+	position: absolute;
+	top: 5px;
+	left: 6px;
+}
+
+.price-epic {
+	color: #fff;
 }
 
 .block {	
@@ -132,6 +181,19 @@ input:focus {
 
 .button-end {
 	margin: 0 auto;
+}
+
+.button-buy {
+	width: 160px;
+	height: 30px;
+	border-radius: 0;
+	background: #32b0e3;
+	border: 1px solid #0092cd;
+	color: #fff;
+	font-family: 'RobotoBold';
+	font-size: 14px;
+	background: -webkit-linear-gradient(rgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
+	background: linear-gradient(rrgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
 }
 
 /*end*/
@@ -404,7 +466,7 @@ input:focus {
 	margin: 5px 15px 0 0;
 }
 
-.open__logo {
+.logo {
 	margin-top: 10px;
 }
 
