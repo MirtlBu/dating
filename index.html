@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link rel="stylesheet" href="style/fonts/font-awesome-4.2.0/css/font-awesome.min.css">§
+	<link rel="stylesheet" href="style/fonts/font-awesome-4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="scripts/fullPage.js-master/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style/jquery.selectbox.css" />
 	<link rel="stylesheet" type="text/css" href="style/style.css">
@@ -18,11 +18,14 @@
 </head>
 <body>
 	<div class="header-fixed">
-		<img src="style/images/epic-logo.png" class="epic-logo">
-		<span>Этот Landing-page продаётся и будет переделан под пожелания заказчика</span>
-		<div class="price-epic"><div class="circle-epic"><img src="style/images/price-2.png" width="18" height="18"></div>12 000 рублей</div>
-		<button class="button-buy">Купить Landing-page</button>
+		<div class="centered">
+			<img src="style/images/epic-logo.png" class="epic-logo">
+			<span>Этот Landing-page продаётся и будет переделан под пожелания заказчика</span>
+			<div class="price-epic"><div class="circle-epic"><img src="style/images/price-2.png" width="18" height="18"></div><span>12 000</span> рублей</div>
+			<button class="button-buy">Купить Landing-page</button>
+		</div>		
 	</div>
+
 	<div id="fullpage">
 
 		<div class="block open section" id="open">
@@ -233,42 +236,41 @@
 	</div>
 
 
-<script type="text/javascript">
-	
-	$(document).ready(function() {
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
 
-	    $('#fullpage').fullpage(
-		    {
-		    	navigation: true, 
-		    	verticalCentered: false, 
-		    	afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-		    		
-		    		$("#date").selectbox("option", 'value="2"');
-		    		console.log($("#date").selectbox("option"));
-		    	}
-		    }
-	    );
+		    $('#fullpage').fullpage(
+			    {
+			    	navigation: true, 
+			    	verticalCentered: false, 
+			    	afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+			    		$("#date").selectbox("option", 'value="2"');
+			    		console.log($("#date").selectbox("option"));
+			    	}
+			    }
+		    );
 
-        $('.control').not('.toTop').click(function() {
-	    	$.fn.fullpage.moveSectionDown();
-	    });
+	        $('.control').not('.toTop').click(function() {
+		    	$.fn.fullpage.moveSectionDown();
+		    });
 
-	    $('.toTop').click(function() {
-	    	$.fn.fullpage.moveTo(1, 0);
-	    });
+		    $('.toTop').click(function() {
+		    	$.fn.fullpage.moveTo(1, 0);
+		    });
 
 
-		$("#date").selectbox({
-			onChange: function (val, inst) {
-				alert('');
-				$.fn.fullpage.moveTo(5, val - 1);
-			},
-			effect: "slide"
+			$("#date").selectbox({
+				onChange: function (val, inst) {
+					alert('');
+					$.fn.fullpage.moveTo(5, val - 1);
+				},
+				effect: "slide"
+			});
+
 		});
 
-	});
-
-</script>
+	</script>
 
 </body>
 </html>

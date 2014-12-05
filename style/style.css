@@ -65,18 +65,28 @@ input:focus {
 	background: #27292b;
 	position: fixed;
 	z-index: 2;
-	padding: 0 100px;
 }
 
-.header-fixed > * {
-	display: inline-block;
-	font-family: 'RobotoLight';
+.centered {
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 6px;
 }
+
+.centered > * {
+	display: inline-block;
+	margin-right: 18px;
+}
+
 
 .header-fixed span {
 	font-size: 13px;
 	color: #fff;
-	font-family: 'RobotoLight';
+	font-family: RobotoLight;
+}
+
+.epic-logo {
+	vertical-align: middle;
 }
 
 .circle-epic {
@@ -86,6 +96,8 @@ input:focus {
 	background-color: #7396ae;
 	position: relative;
 	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
 }
 
 .circle-epic img {
@@ -96,6 +108,11 @@ input:focus {
 
 .price-epic {
 	color: #fff;
+	font-family: RobotoLight;
+}
+
+.price-epic span {
+	font-family: RobotoBold;
 }
 
 .block {	
@@ -122,6 +139,10 @@ input:focus {
 	position: absolute;
 	left: 0;
 	right: 0;
+}
+
+.header {
+	top: 50px;
 }
 
 /*button*/
@@ -190,7 +211,7 @@ input:focus {
 	background: #32b0e3;
 	border: 1px solid #0092cd;
 	color: #fff;
-	font-family: 'RobotoBold';
+	font-family: RobotoLight;
 	font-size: 14px;
 	background: -webkit-linear-gradient(rgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
 	background: linear-gradient(rrgba(50, 176, 227, 1), rgba(0, 146, 225, 1)), url(images/bit-line.jpg);
@@ -497,12 +518,12 @@ input:focus {
 
 .title-open {
 	font-size: 36px;
-	top: 15%;
+	top: 18%;
 }
 
 .title-how, .title-review, .title-end {
 	font-size: 36px;
-	top: 5%;
+	top: 9%;
 }
 
 .title-subscribe {
@@ -531,7 +552,7 @@ input:focus {
 }
 
 .cards {
-	top: 16%;
+	top: 19%;
 	height: 58%;
 }
 
@@ -595,7 +616,7 @@ input:focus {
 }
 
 .reviews {
-	top: 18%;
+	top: 23%;
 }
 
 .reviews__item {
@@ -676,7 +697,7 @@ input:focus {
 }
 
 .hellwrapper {
-	top: 23%;
+	top: 25%;
 }
 
 .end select {
@@ -839,6 +860,15 @@ input:focus {
 
 .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus {
 	color: #aaa;
+}
+
+@media screen and ( min-height: 768px ){
+    .cards {
+    	height: 73%;
+    }
+    .title-suggest {
+    	margin-top: 70%;
+    }
 }
 
 
