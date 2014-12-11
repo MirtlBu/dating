@@ -240,11 +240,14 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
-
+			//костыль
 			$(".end").find('input').on('focusin', function() {
 			  $('.sbHolder').addClass('bordered');
 			});
-
+			$('form').on('click', '.sbHolder', function() {
+				$('.sbHolder').removeClass('bordered');
+			});
+			//слайдер
 		    $('#fullpage').fullpage(
 			    {
 			    	navigation: true, 
@@ -254,16 +257,14 @@
 			    	}
 			    }
 		    );
-
 	        $('.control').not('.toTop').click(function() {
 		    	$.fn.fullpage.moveSectionDown();
 		    });
-
 		    $('.toTop').click(function() {
 		    	$.fn.fullpage.moveTo(1, 0);
 		    });
 
-
+		    //селект плагин
 			$("#date").selectbox({
 				onChange: function (val, inst) {
 					$.fn.fullpage.moveTo(5, val - 1);
