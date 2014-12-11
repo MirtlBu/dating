@@ -43,6 +43,10 @@ input, button, select {
 	outline: 0;
 }
 
+select:focus {
+	border: 1px solid green;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -836,6 +840,10 @@ input:focus {
 	padding: 0 0 0 10px;
 	font-size: 20px;
 	text-align: left;
+}
+
+.bordered {
+	border: 1px solid #ccc;
 }
 
 .sbToggle, .sbToggle:hover {
