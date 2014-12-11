@@ -43,6 +43,10 @@ input, button, select {
 	outline: 0;
 }
 
+select:focus {
+	border: 1px solid green;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -185,10 +189,6 @@ input:focus {
 	background: rgba(144, 46, 50, 1);
 }
 
-.button-open, .button-suggest, .button-review {
-	
-}
-
 .button-how {
 	top: 50%;
 	left: 0;
@@ -214,10 +214,6 @@ input:focus {
 	bottom: 15px;
 	right: 15px;
 	width: 180px;
-}
-
-.button-order > a {
-	
 }
 
 .button-end {
@@ -250,7 +246,6 @@ input:focus {
 .subscribe {
 	width: 780px;
 	margin: 15px auto;
-	top: 67%;
 	background: rgba(255, 255, 255, .7);
 	text-align: center;
 	border: 7px solid rgba(255, 255, 255, .5);
@@ -568,11 +563,15 @@ input:focus {
 	text-align: left;
 }
 
-.how {
+.how-bg {
+	width: 100%;
+	height: 265px;
+	position: absolute;
+	bottom: 0;
 	background-image: url(images/how-bg.jpg);
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-size: 110%;
+	background-position: center center;
+	border-top: 5px solid rgba(255, 255, 255, .5);
+	box-sizing: border-box;
 }
 
 .how form {
@@ -841,6 +840,10 @@ input:focus {
 	padding: 0 0 0 10px;
 	font-size: 20px;
 	text-align: left;
+}
+
+.bordered {
+	border: 1px solid #ccc;
 }
 
 .sbToggle, .sbToggle:hover {
