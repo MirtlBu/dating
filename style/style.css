@@ -43,6 +43,8 @@ input, button, select {
 	outline: 0;
 }
 
+button::-moz-focus-inner { margin: -1px; padding: 0; border-width: 0; }
+
 select:focus {
 	border: 1px solid green;
 }
@@ -160,6 +162,8 @@ input:focus {
 	margin: 0 auto;
 	width: 324px;
 	position: absolute;
+	box-sizing: border-box;
+	border-image-width: 0;
 	-webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.22);
 	-moz-box-shadow:    0px 2px 5px 0px rgba(0, 0, 0, 0.22);
 	box-shadow:         0px 2px 5px 0px rgba(0, 0, 0, 0.22);
@@ -217,7 +221,8 @@ input:focus {
 }
 
 .button-end {
-	bottom: -18%;
+	position: relative;
+	margin: 15px 0 0 0;
 }
 
 .button-buy {
@@ -267,7 +272,7 @@ input:focus {
 .end input, .end select {
 	display: block;
 	border-radius: 3px;
-	margin: 35px auto;
+	margin-bottom: 35px;
 	width: 90%;
 }
 
@@ -742,7 +747,7 @@ input:focus {
 	display: inline-block;
 	vertical-align: top;
 	width: 413px;
-	margin-left: 35px;
+	margin-left: 50px;
 	text-align: center;
 	position: relative;
 }
@@ -752,6 +757,7 @@ input:focus {
 	font-size: 16px;
 	display: block;
 	margin-top: 25px;
+	text-align: left;
 }
 
 .end .cards__item:last-child {
@@ -834,7 +840,7 @@ input:focus {
 	font-size: 18px;
 	display: block;
 	border-radius: 3px;
-	margin: 35px auto;
+	margin: 30px 0 35px 0;
 	position: relative;
 	height: 39px;
 	padding: 0 0 0 10px;
